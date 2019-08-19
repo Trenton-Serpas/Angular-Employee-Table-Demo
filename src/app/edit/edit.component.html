@@ -1,0 +1,94 @@
+<br>
+<mat-card style="margin: 0 auto; padding: 5px; width: 400px">
+    <form [formGroup]="employeeInfo" (ngSubmit)="saveChanges()">
+        <mat-form-field>
+            <input formControlName="firstName" maxlength="35" matInput placeholder="First Name" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input formControlName="lastName" maxlength="35" matInput placeholder="Last Name" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input formControlName="address" maxlength="50" matInput placeholder="Address" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input formControlName="city" maxlength="50" matInput placeholder="City" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-select formControlName="state" class="form-control" placeholder="State" required>
+                <mat-option value="AL">Alabama</mat-option>
+                <mat-option value="AK">Alaska</mat-option>
+                <mat-option value="AZ">Arizona</mat-option>
+                <mat-option value="AR">Arkansas</mat-option>
+                <mat-option value="CA">California</mat-option>
+                <mat-option value="CO">Colorado</mat-option>
+                <mat-option value="CT">Connecticut</mat-option>
+                <mat-option value="DE">Delaware</mat-option>
+                <mat-option value="FL">Florida</mat-option>
+                <mat-option value="GA">Georgia</mat-option>
+                <mat-option value="HI">Hawaii</mat-option>
+                <mat-option value="ID">Idaho</mat-option>
+                <mat-option value="IL">Illinois</mat-option>
+                <mat-option value="IN">Indiana</mat-option>
+                <mat-option value="IA">Iowa</mat-option>
+                <mat-option value="KS">Kansas</mat-option>
+                <mat-option value="KY">Kentucky</mat-option>
+                <mat-option value="LA">Louisiana</mat-option>
+                <mat-option value="ME">Maine</mat-option>
+                <mat-option value="MD">Maryland</mat-option>
+                <mat-option value="MA">Massachusetts</mat-option>
+                <mat-option value="MI">Michigan</mat-option>
+                <mat-option value="MN">Minnesota</mat-option>
+                <mat-option value="MS">Mississippi</mat-option>
+                <mat-option value="MO">Missouri</mat-option>
+                <mat-option value="MT">Montana</mat-option>
+                <mat-option value="NE">Nebraska</mat-option>
+                <mat-option value="NV">Nevada</mat-option>
+                <mat-option value="NH">New Hampshire</mat-option>
+                <mat-option value="NJ">New Jersey</mat-option>
+                <mat-option value="NM">New Mexico</mat-option>
+                <mat-option value="NY">New York</mat-option>
+                <mat-option value="NC">North Carolina</mat-option>
+                <mat-option value="ND">North Dakota</mat-option>
+                <mat-option value="OH">Ohio</mat-option>
+                <mat-option value="OK">Oklahoma</mat-option>
+                <mat-option value="OR">Oregon</mat-option>
+                <mat-option value="PA">Pennsylvania</mat-option>
+                <mat-option value="RI">Rhode Island</mat-option>
+                <mat-option value="SC">South Carolina</mat-option>
+                <mat-option value="SD">South Dakota</mat-option>
+                <mat-option value="TN">Tennessee</mat-option>
+                <mat-option value="TX">Texas</mat-option>
+                <mat-option value="UT">Utah</mat-option>
+                <mat-option value="VT">Vermont</mat-option>
+                <mat-option value="VA">Virginia</mat-option>
+                <mat-option value="WA">Washington</mat-option>
+                <mat-option value="WV">West Virginia</mat-option>
+                <mat-option value="WI">Wisconsin</mat-option>
+                <mat-option value="WY">Wyoming</mat-option>
+              </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input formControlName="zip" maxlength="9" matInput placeholder="Zip code" required>
+        </mat-form-field>
+        <hr>
+        <mat-form-field>
+            <input formControlName="homePhone" maxlength="10" matInput placeholder="Home Phone" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input formControlName="cellPhone" maxlength="10" matInput placeholder="Cell Phone" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input formControlName="email" maxlength="50" matInput placeholder="Email" required>
+        </mat-form-field>
+        <br>
+        <button type="submit" mat-raised-button color="primary" [disabled]="!employeeInfo.valid">Save</button>
+        <button type="button" mat-raised-button color="primary" routerLink="/list">Close</button>
+    </form>
+</mat-card>

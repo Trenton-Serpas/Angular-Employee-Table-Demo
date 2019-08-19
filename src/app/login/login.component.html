@@ -1,0 +1,15 @@
+<br>
+<mat-card style="margin: 0 auto; padding: 5px; width: 300px">
+    <mat-card *ngIf="failed" style="padding: 5px; margin: 10px; color: red; background-color: #ffeeee">Invalid login</mat-card>
+    <form [formGroup]="loginInfo" (ngSubmit)="attemptLogin()">
+        <mat-form-field>
+            <input formControlName="email" matInput placeholder="Email" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input formControlName="password" type="password" matInput placeholder="Password" required>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" [disabled]="!loginInfo.valid">Login</button>
+    </form>
+</mat-card>
